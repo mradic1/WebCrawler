@@ -71,13 +71,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CrawlerContainer.cs">
+    <Compile Include="View_Containers\CrawlerContainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="CrawlerContainer.Designer.cs">
+    <Compile Include="View_Containers\CrawlerContainer.Designer.cs">
       <DependentUpon>CrawlerContainer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database1DataSet.Designer.cs">
+    <Compile Include="Classes\CrawlerHandler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Classes\DataBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataBase\Database1DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
@@ -88,27 +94,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="HomeTabContainer.cs">
+    <Compile Include="View_Containers\HomeTabContainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="HomeTabContainer.Designer.cs">
+    <Compile Include="View_Containers\HomeTabContainer.Designer.cs">
       <DependentUpon>HomeTabContainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\LogicHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SettingsPageContainer.cs">
+    <Compile Include="View_Containers\SettingsPageContainer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SettingsPageContainer.Designer.cs">
+    <Compile Include="View_Containers\SettingsPageContainer.Designer.cs">
       <DependentUpon>SettingsPageContainer.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CrawlerContainer.resx">
+    <Compile Include="Classes\UserData.cs" />
+    <EmbeddedResource Include="View_Containers\CrawlerContainer.resx">
       <DependentUpon>CrawlerContainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HomeTabContainer.resx">
+    <EmbeddedResource Include="View_Containers\HomeTabContainer.resx">
       <DependentUpon>HomeTabContainer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -121,18 +129,18 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SettingsPageContainer.resx">
+    <EmbeddedResource Include="View_Containers\SettingsPageContainer.resx">
       <DependentUpon>SettingsPageContainer.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Database1DataSet.xsc">
+    <None Include="DataBase\Database1DataSet.xsc">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </None>
-    <None Include="Database1DataSet.xsd">
+    <None Include="DataBase\Database1DataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>Database1DataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Database1DataSet.xss">
+    <None Include="DataBase\Database1DataSet.xss">
       <DependentUpon>Database1DataSet.xsd</DependentUpon>
     </None>
     <None Include="Firefox\omni.ja" />
@@ -151,10 +159,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.mdf">
+    <Content Include="DataBase\Database1.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Database1_log.ldf">
+    <Content Include="DataBase\Database1_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
